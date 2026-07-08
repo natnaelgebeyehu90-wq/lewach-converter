@@ -195,7 +195,7 @@ const ConverterApp = () => {
     try {
       setDownloadUrl(''); setExtractedText('');
       setStatus(targetFormat === 'txt' ? 'Scanning image for text... 🔍' : 'Converting your file... ⚙️');
-      const response = await axios.post('http://localhost:5000/api/convert', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
+      const response = await axios.post('https://lewach-converter.onrender.com/api/convert', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
       setStatus('Success! Your file is ready.'); setDownloadUrl(response.data.downloadUrl);
       if (response.data.extractedText) setExtractedText(response.data.extractedText);
     } catch (error) {
