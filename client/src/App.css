@@ -677,3 +677,52 @@ body {
   border-color: rgba(239, 68, 68, 0.6);
   color: #fff;
 }
+
+/* =======================================================
+   📱 MOBILE RESPONSIVENESS (Screens smaller than 768px)
+   ======================================================= */
+   @media screen and (max-width: 768px) {
+  
+    /* 1. Stop the main app from shrinking too thin */
+    .App, 
+    #root {
+      width: 100%;
+      overflow-x: hidden; /* Prevents side-to-side scrolling bugs */
+    }
+  
+    /* 2. Make your main white box / container fill the screen */
+    .container, 
+    .main-box, 
+    .card {
+      width: 90%; /* Leaves a nice little gap on the left and right */
+      margin: 10px auto;
+      padding: 15px;
+    }
+  
+    /* 3. Stack things that used to be side-by-side (like sidebars or format selectors) */
+    .flex-row,
+    header,
+    nav {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    /* 4. Make tap targets HUGE for thumbs */
+    button, 
+    input[type="file"],
+    select {
+      width: 100%; 
+      padding: 16px; /* Bigger padding for easier tapping */
+      margin-bottom: 12px;
+      font-size: 16px; /* Prevents iPhones from auto-zooming */
+      box-sizing: border-box; /* Keeps borders from pushing width past 100% */
+    }
+  
+    /* 5. Keep images from breaking the screen width */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
