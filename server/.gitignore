@@ -1,0 +1,14 @@
+# Dependencies (Massive folders we don't need on GitHub)
+node_modules/
+
+# Secrets and credentials (NEVER upload your database password or keys!)
+.env
+
+# Local logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# If you store uploaded files locally during conversion, ignore them too
+uploads/
+converted/
